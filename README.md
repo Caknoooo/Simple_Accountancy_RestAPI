@@ -4,7 +4,11 @@ Today, I implemented my laravel 8 result. I started learning laravel 8 on 12/20/
 
 ## Code Explanation
 
-I used the help of ```php artisan make:model Transaction -m``` to create the model
+I used the help of 
+```
+php artisan make:model Transaction -m
+``` 
+to create the model
 then the file ```2022_12_24_075759_create_transactions_table``` will be automatically created
 
 then I modified the file so that a new table would be created
@@ -178,3 +182,32 @@ Route::resource('/transaction', Transaction::class)->except(['create', 'edit']);
 ```
 
 But the code has a weakness. If we change the default method that was created the first time the TransactionController is changed, then the resource function will not work
+
+## Output 
+Here I use the help of the Postman application to make the rest-API
+
+**GET**
+
+![GET](https://user-images.githubusercontent.com/92671053/209437871-c82435f5-b7d1-47e2-8666-bf26a9556677.PNG)
+
+**CREATE**
+
+![CREATED](https://user-images.githubusercontent.com/92671053/209437877-611d109c-8f79-4e60-a898-937abf75dfca.PNG)
+
+**READ**
+
+![READ](https://user-images.githubusercontent.com/92671053/209437873-1cf717a3-00e1-428d-9a10-207e5ef50aeb.PNG)
+
+**UPDATE**
+
+![UPDATE](https://user-images.githubusercontent.com/92671053/209437875-02ec0844-ab29-4453-93e5-a3b09414c799.PNG)
+
+**DELETE**
+
+![DELETED](https://user-images.githubusercontent.com/92671053/209437870-b8f773e4-fd2c-4d88-90cd-d59f7ccd8fd7.PNG)
+
+After all is done, the final result is as follows
+
+## Result
+
+![AFTER_DELETE](https://user-images.githubusercontent.com/92671053/209437876-55571c93-91c3-4f58-93b5-1bba90f90589.PNG)
