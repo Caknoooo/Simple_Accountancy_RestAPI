@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->double('amount');
+            $table->timestamp('time')->default(now());
+            $table->enum('type', ['expense', 'revenue']); // Hanya bisa diisi sesuai parameter ke 2
             $table->timestamps();
         });
     }
